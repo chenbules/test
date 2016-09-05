@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#cans{
+				display: block;
+				border: 1px solid rosybrown;
+				margin: 50px auto;
+				background: wheat;
+			}
+			h3{
+				width: 100px;
+				height: 50px;
+				display: block;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>
+			使用canvas绘制太极图
+		</h3>
+		
+		<canvas id="cans" width="800" height="600"></canvas>
+		<script type="text/javascript">
+			var cans = document.querySelector("#cans");
+			var context = cans.getContext("2d");
+			context.beginPath();
+			context.arc(400,300,200,Math.PI*1.5,Math.PI*0.5,false);
+			context.stroke();
+			context.fillStyle = "white";
+			context.closePath();
+			context.fill();
+			
+			
+			context.beginPath();
+			context.arc(400,300,200,Math.PI*0.5,Math.PI*1.5,false);
+			context.stroke();
+			context.fillStyle = "black";
+			context.closePath();
+			context.fill();
+			
+			
+			context.beginPath();
+			context.arc(400,200,100,Math.PI*0.5,Math.PI*1.5,false);
+			context.stroke();
+			context.fillStyle = "white";
+			context.closePath();
+			context.fill();
+			
+			
+			context.beginPath();
+			context.arc(400,400,100,Math.PI*1.5,Math.PI*0.5,false);
+			context.fillStyle = "black";
+			context.closePath();
+			context.fill();
+			
+			context.beginPath();
+			context.arc(400,200,10,0,Math.PI*2,false);
+			context.fillStyle = "black";
+			context.closePath();
+			context.fill();
+			
+			
+			context.beginPath();
+			context.arc(400,400,10,0,Math.PI*2,false);
+			context.fillStyle = "white";
+			context.closePath();
+			context.fill();
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
